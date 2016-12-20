@@ -1,0 +1,37 @@
+<div class="flexbox-container">
+  <div class="flex-item">
+    <h1>Menu Tracker</h1>
+    <p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
+    <p class='explanation'>Menu Tracker helps you see what dishes are available today.</p>
+    <p>{{menuLength}} foods total</p>
+    <p>{{availableItems.length}} available today</p>
+    {{#each model as |food|}}
+      {{#collapsible-component as |isOpen component|}}
+      <div class="food-item {{if food.isAvailable '' 'not-available'}}">
+        <div class="title-bar" {{action "toggleOpen" target=component}}>{{food.name}} <span class="pull-right">{{if isOpen 'V' '>'}}</span></div>
+        {{#if isOpen}}
+          {{icon-image food.imageUrl left=true}}
+          <div class="description">{{food.description}}</div>
+          {{#link-to 'foods.food' food class="no-decoration"}}
+            <button>Show Page</button>
+          {{/link-to}}
+          {{#link-to 'foods.food.edit' food class="no-decoration"}}
+            <button>Edit Page</button>
+          {{/link-to}}
+          <button {{action 'toggleAvailability' food}}>
+            {{if food.isAvailable 'Make Unavailable' 'Make Available'}}
+          </button>
+        {{/if}}
+      </div>
+
+      {{/collapsible-component}}
+      <!-- {{food-item food=food}} -->
+    {{/each}}
+    <hr>
+    {{input value=newItem}}
+    <button {{action 'saveNewItem'}}>Save</button>
+  </div>
+  <div class="flex-item">
+    {{outlet}}
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.not-available {
+  color: grey;
+}
+
+.not-available a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.food-item, .restaurant-item {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  max-width: 300px;
+  padding: 4px;
+  margin: 4px;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.food-item .title-bar {
+  font-size: 1.25em;
+}
+
+.food-item .description {
+  padding: 8px;
+  min-height: 80px;
+}
+
+.image-icon {
+  max-width: 64px;
+  max-height: 64px;
+  padding: 5px;
+}

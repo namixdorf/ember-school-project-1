@@ -1,0 +1,12 @@
+<p>We are editing food.</p>
+{{model.name}}
+
+<p>Name: {{input value=model.name}}</p>
+
+<p>Description: {{textarea value=model.description class="medium-text-area"}}</p>
+
+<p>Image Url: {{input value=model.imageUrl}}</p>
+
+<p>{{icon-image model.imageUrl left=true}}</p>
+
+<button {{action 'save'}}>Save</button>

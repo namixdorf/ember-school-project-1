@@ -12,6 +12,17 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    firebase: {
+      apiKey: 'AIzaSyDVi3eqJm8d5IZDHNE09FYXjr7EmOh69lY',
+      authDomain: 'ember-school-project-1.firebaseapp.com',
+      databaseURL: 'https://ember-school-project-1.firebaseio.com',
+      storageBucket: 'ember-school-project-1.appspot.com',
+    },
+    // contentSecurityPolicy: {
+    //   'script-src': "'self' 'unsafe-eval' apis.google.com",
+    //   'frame-src': "'self' https://*.firebaseapp.com",
+    //   'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    // },
 
     APP: {
       // Here you can pass flags/options to your application instance
