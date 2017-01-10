@@ -4,5 +4,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   isAvailable: DS.attr('boolean'),
   description: DS.attr('string'),
-  imageUrl: DS.attr('string')
+  imageUrl: DS.attr('string'),
+  restaurant: DS.belongsTo(),
+  course: DS.attr('string')
 });

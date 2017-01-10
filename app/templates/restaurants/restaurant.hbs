@@ -1,3 +1,9 @@
 <h1>A restaurant</h1>
 <h2>{{model.name}}</h2>
+<p>The following foods are served here.</p>
+<ul>
+  {{#each model.foods as |food|}}
+    <li>{{food.name}}</li>
+  {{/each}}
+</ul>
 {{#link-to 'restaurants.restaurant.edit' model}}<button>Edit</button>{{/link-to}}

@@ -2,5 +2,6 @@
 <p>
   {{model.description}}
 </p>
+<p>This is served at: {{model.restaurant.name}} as {{model.course}}.</p>
 {{link-to 'edit this food' 'foods.food.edit' model}}
 <button {{action 'destroyItem' model}}>Remove</button>

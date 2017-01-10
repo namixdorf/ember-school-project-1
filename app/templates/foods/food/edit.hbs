@@ -7,6 +7,18 @@
 
 <p>Image Url: {{input value=model.imageUrl}}</p>
 
-<p>{{icon-image model.imageUrl left=true}}</p>
+{{icon-image model.imageUrl left=false}}
+
+<br />
+<p>
+  {{#x-select value=model.course}}
+    {{#x-option value="Appetizer"}}Appetizer{{/x-option}}
+    {{#x-option value="Entree"}}Entree{{/x-option}}
+    {{#x-option value="Dessert"}}Dessert{{/x-option}}
+    {{#x-option value="Beverage"}}Beverage{{/x-option}}
+  {{/x-select}}
+</p>
+
+<br />
 
 <button {{action 'save'}}>Save</button>
